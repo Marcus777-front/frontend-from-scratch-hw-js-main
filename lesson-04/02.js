@@ -16,8 +16,18 @@
 */
 
 function findUniqueElements(array) {
-    return [...new Set(array)];
-}
+    if (!Array.isArray(array)) {
+      return []
+    }
+    const uniqueElements = []
+    for (let i = 0; i < array.length; i++) {
+      const element = array[i]
+      if (!includesElement(uniqueElements, element)) {
+        uniqueElements.push(element)
+      }
+    }
+    return uniqueElements
+  }
 
 
 
