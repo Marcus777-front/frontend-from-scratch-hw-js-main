@@ -18,12 +18,13 @@
 function findUniqueElements(array) {
   const newArray = []
   for (let i = 0; i < array.length; i++) {
-    if (includesElement(array)) {
-        const element = array[index]
-    };
-    
+    if (!includesElement(newArray, array[i])) {
+        newArray.push(array[i])
+    }
   }
+  return newArray
   }
 
+console.log(findUniqueElements([1, 2, 3, 2, 1, 4]))
 
 

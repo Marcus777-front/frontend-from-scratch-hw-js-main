@@ -13,12 +13,12 @@
 */
 
 function doubleEachCharacter(str) {
-  if (typeof str !== "string") {
-    return ""
-  }
-  let doubledString = ""
-  for (let i = 0; i < str.length; i++) {
-    doubledString += str[i] + str[i]
-  }
-  return doubledString
+let string = ""
+for (let i = 0; i < str.length; i++) {
+   string += str[i] + str[i]    
+   }
+return string    
 }
+
+console.log(doubleEachCharacter('hello'));
+
