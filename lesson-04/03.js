@@ -18,12 +18,12 @@ findCommonElements([1, 2, 3], [2, 3, 4]) // [2, 3]
 */
 
 function findCommonElements(array1, array2) {
-    const commonElements = []
+    const commonElements = [];
     for (const element of array1) {
-      if (includesElement(array2, element)) {
-        commonElements.push(element)
+      if (array2.includes(element)) {
+        commonElements.push(element);
       }
     }
-    return commonElements
+    return commonElements;
   }
-  console.log(findCommonElements([1, 2, 3], [2, 3, 4]))
+console.log(findCommonElements([1, 2, 3], [2, 3, 4]));
