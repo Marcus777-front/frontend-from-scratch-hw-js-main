@@ -11,8 +11,8 @@
 // }
 
 function combat(health, damage) {
+    let ostatok = health - damage
     while (ostatok > 0)
-        let ostatok = health - damage
         return ostatok
 }
 console.log(combat(31, 30));
