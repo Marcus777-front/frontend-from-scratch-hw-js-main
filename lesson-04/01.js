@@ -14,13 +14,12 @@ includesElement([1, 2, 3], 2)  // должен вернуть `true`.
 */
 
 function includesElement(array, element) {
-  if (!Array.isArray(array)) {
-    return false
-  }
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === element) {
-      return true
+    if (!Array.isArray(array)) {
+      return false;
     }
+    if (Number.isNaN(element)) { // Проверка на NaN
+      return array.some(Number.isNaN); // Используем some для проверки NaN
+    }
+    return array.includes(element); // Используем includes для повышения эффективности
   }
-  return false
-}
+  
