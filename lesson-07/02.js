@@ -4,7 +4,7 @@
  */
 
 function isNumeric(str) {
-  return !isNaN((str)) && isFinite(str);
+  return !isNaN(parseFloat(str)) && isFinite(str);
 }
 
 
