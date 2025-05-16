@@ -28,7 +28,7 @@ const filter = (array, callback) => {
   const arrayFilter = []
   for (let index = 0; index < array.length; index++) {
     const element = array[index];
-    if(callback(element)){
+    if(callback(element) !== undefined){
       arrayFilter.push(element)
     }    
   }
