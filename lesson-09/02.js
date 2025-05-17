@@ -35,10 +35,3 @@ const map = (array, callback) => {
   }
   return newArray
 }
-
-const map2 = (element) => {
-  return element * 2
-}
-
-const doubledNumbers = map(numbers, map2)
-console.log(doubledNumbers);
