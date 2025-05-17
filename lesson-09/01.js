@@ -22,13 +22,13 @@ const oddNumbers = filter(numbers, (element, index) => {
 
 console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 */
-const numbers = [1, 2, 3, 4, 5]
+//const numbers = [undefined, 2, 3, 4, 5]
 
 const filter = (array, callback) => {
   const arrayFilter = []
   for (let index = 0; index < array.length; index++) {
     const element = array[index];
-    if(callback(element) !== undefined){
+    if(callback(element)){
       arrayFilter.push(element)
     }    
   }
@@ -36,7 +36,9 @@ const filter = (array, callback) => {
 }
 
 const filter2 = (element) => {
-  return element % 2 !== 0
+  if(element % 2 !== 0 && element !== undefined){
+    return element
+  }
 } 
 const oddNumbers = filter(numbers, filter2)
 
